@@ -1,95 +1,344 @@
- <!DOCTYPE html> 
-<html> 
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<title>lightbox插件开发</title> 
-<link rel="stylesheet" type="text/css" href="lightbox.css">
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="lightbox.js"></script>
-</head> 
-<body style="padding:50px;">    
-class="js-lightbox"表示这个元素要启用lightbox<br>
-data-role="lightbox"表示这个元素要启用lightbox<br>
-data-source="images/2-1.jpg" 原图的地址<br>
-data-group="group-2"标识当前是否属于一个组别<br>
-data-id="ghfh"图片的唯一标识<br>
-data-caption="nghnhg"当前图片的描述文字<br>
-<H1>第一组图片</H1>
-<div>
-	<img class="js-lightbox" 
-    				data-role="lightbox"
-                    data-source="images/1-1.jpg" 
-                    src="images/1-1.jpg"
-                    data-group="group-1"
-                    data-id="kwhdiuqwdhiu"
-                    data-caption="这么美的风景，是否让你窒息！"
-                     width="100" height="100">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>lightbox插件开发</title>
+    <link rel="stylesheet" type="text/css" href="lightbox.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="lightbox.js"></script>
+  </head>
+  <body style="padding:50px;">
+    class="js-lightbox"表示这个元素要启用lightbox<br />
+    data-role="lightbox"表示这个元素要启用lightbox<br />
+    data-source="images/2-1.jpg" 原图的地址<br />
+    data-group="group-2"标识当前是否属于一个组别<br />
+    data-id="ghfh"图片的唯一标识<br />
+    data-caption="nghnhg"当前图片的描述文字<br />
+    <H1>第一组图片</H1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-source="images/1-1.jpg"
+        src="images/1-1.jpg"
+        data-group="group-1"
+        data-id="kwhdiuqwdhiu"
+        data-caption="这么美的风景，是否让你窒息！"
+        width="100"
+        height="100"
+      />
 
- 	<img class="js-lightbox"  data-role="lightbox" data-source="images/1-2.jpg" src="images/1-2.jpg" data-group="group-1" data-id="thgtrhrth" data-caption="美术是这样的，它可以臆造出你所想的一切，只要你想！" width="100" height="100"> 
-    <img class="js-lightbox"  data-role="lightbox" data-source="images/1-3.jpg" src="images/1-3.jpg" data-group="group-1" data-id="htrhtr" data-caption="世界万物，皆为你所动，你要懂得去欣赏~" width="100" height="100"> 
-</div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-source="images/1-2.jpg"
+        src="images/1-2.jpg"
+        data-group="group-1"
+        data-id="thgtrhrth"
+        data-caption="美术是这样的，它可以臆造出你所想的一切，只要你想！"
+        width="100"
+        height="100"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-source="images/1-3.jpg"
+        src="images/1-3.jpg"
+        data-group="group-1"
+        data-id="htrhtr"
+        data-caption="世界万物，皆为你所动，你要懂得去欣赏~"
+        width="100"
+        height="100"
+      />
+    </div>
 
-<H1>两张独立的图片</H1>
-<div>
-	<img class="js-lightbox" 
-    				data-role="lightbox"
-                    data-source="images/2-5.jpg" 
-                    src="images/2-5.jpg"
-                    data-group="group-alone1"
-                    data-id="ghfh"
-                    data-caption="车，是一个男人的象征，它不像女人那么妖娆，但会比女人更加吸引你！"
-                     width="100" height="100">
-	<img class="js-lightbox" 
-    				data-role="lightbox"
-                    data-source="images/2-4.jpg" 
-                    src="images/2-4.jpg"
-                    data-group="group-alone2"
-                    data-id="ghfh"
-                    data-caption="这样的车，再来个心爱的女人，一切都那么美~"
-                     width="100" height="100">
-</div>
+    <H1>两张独立的图片</H1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-source="images/2-5.jpg"
+        src="images/2-5.jpg"
+        data-group="group-alone1"
+        data-id="ghfh"
+        data-caption="车，是一个男人的象征，它不像女人那么妖娆，但会比女人更加吸引你！"
+        width="100"
+        height="100"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-source="images/2-4.jpg"
+        src="images/2-4.jpg"
+        data-group="group-alone2"
+        data-id="ghfh"
+        data-caption="这样的车，再来个心爱的女人，一切都那么美~"
+        width="100"
+        height="100"
+      />
+    </div>
 
-<h1>第二组图片</h1>
-<div>
-	<img class="js-lightbox" data-role="lightbox" data-group="group-2" data-caption="俄方未婚夫而更为富人前无古人后突然威风威风" data-id="sdfsdfw" data-source="images/2-1.jpg" src="images/2-1.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-2" data-caption="俄方未婚夫但如果热过头热狗热管威风威风" data-id="fgdgre" data-source="images/2-2.jpg" src="images/2-2.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-2" data-caption="俄方未婚夫而供热WQRFWEFRE威风威风" data-id="t43t43" data-source="images/2-3.jpg" src="images/2-3.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-2" data-caption="俄方未婚夫KUIKYUKYUK威风威风" data-id="ghrthtrh" data-source="images/2-4.jpg" src="images/2-4.jpg" width="100px" height="100px">
-</div>
-<h1>第三组图片</h1>
-<div>
-	<img class="js-lightbox" data-role="lightbox" data-group="group-3" data-caption="俄方未婚夫二哥热歌如果热威风威风" data-id="bfdgb" data-source="images/3-1.jpg" src="images/3-1.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-3" data-caption="俄方未婚夫威风威风" data-id="rtet" data-source="images/3-2.jpg" src="images/3-2.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-3" data-caption="俄方未婚供热供热行业突然很夫威风威风" data-id="dsfsdf" data-source="images/3-3.jpg" src="images/3-3.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-3" data-caption="俄方未婚日供热供热供热夫威风威风" data-id="ghthty" data-source="images/3-4.jpg" src="images/3-4.jpg" width="100px" height="100px">
-</div>
-<h1>第四组图片</h1>
-<div>
-	<img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚夫二哥热歌如果热威风威风" data-id="bfdgb" data-source="images/3-1.jpg" src="images/3-1.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚夫威风威风" data-id="rtet" data-source="images/3-2.jpg" src="images/3-2.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚供热供热行业突然很夫威风威风" data-id="dsfsdf" data-source="images/3-3.jpg" src="images/3-3.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚日供热供热供热夫威风威风" data-id="ghthty" data-source="images/3-4.jpg" src="images/3-4.jpg" width="100px" height="100px">
-    
-	<img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚夫二哥热歌如果热威风威风" data-id="4f6we4f" data-source="images/3-1.jpg" src="images/3-1.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚夫威风威风" data-id="grkeghruieh455" data-source="images/3-2.jpg" src="images/3-2.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚供热供热行业突然很夫威风威风" data-id="iuyiuer55" data-source="images/3-3.jpg" src="images/3-3.jpg" width="100px" height="100px">
-    <img class="js-lightbox" data-role="lightbox" data-group="group-4" data-caption="俄方未婚日供热供热供热夫威风威风" data-id="lgjko5552" data-source="images/3-4.jpg" src="images/3-4.jpg" width="100px" height="100px">
-</div>
-<h1>一组图片只有一张</h1>
-<div>
-	<img class="js-lightbox" data-role="lightbox" data-group="group-5" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="images/2-5.jpg" src="images/2-5.jpg" width="100px" height="100px">
-</div>
+    <h1>第二组图片</h1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-2"
+        data-caption="俄方未婚夫而更为富人前无古人后突然威风威风"
+        data-id="sdfsdfw"
+        data-source="images/2-1.jpg"
+        src="images/2-1.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-2"
+        data-caption="俄方未婚夫但如果热过头热狗热管威风威风"
+        data-id="fgdgre"
+        data-source="images/2-2.jpg"
+        src="images/2-2.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-2"
+        data-caption="俄方未婚夫而供热WQRFWEFRE威风威风"
+        data-id="t43t43"
+        data-source="images/2-3.jpg"
+        src="images/2-3.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-2"
+        data-caption="俄方未婚夫KUIKYUKYUK威风威风"
+        data-id="ghrthtrh"
+        data-source="images/2-4.jpg"
+        src="images/2-4.jpg"
+        width="100px"
+        height="100px"
+      />
+    </div>
+    <h1>第三组图片</h1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-3"
+        data-caption="俄方未婚夫二哥热歌如果热威风威风"
+        data-id="bfdgb"
+        data-source="images/3-1.jpg"
+        src="images/3-1.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-3"
+        data-caption="俄方未婚夫威风威风"
+        data-id="rtet"
+        data-source="images/3-2.jpg"
+        src="images/3-2.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-3"
+        data-caption="俄方未婚供热供热行业突然很夫威风威风"
+        data-id="dsfsdf"
+        data-source="images/3-3.jpg"
+        src="images/3-3.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-3"
+        data-caption="俄方未婚日供热供热供热夫威风威风"
+        data-id="ghthty"
+        data-source="images/3-4.jpg"
+        src="images/3-4.jpg"
+        width="100px"
+        height="100px"
+      />
+    </div>
+    <h1>第四组图片</h1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚夫二哥热歌如果热威风威风"
+        data-id="bfdgb"
+        data-source="images/3-1.jpg"
+        src="images/3-1.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚夫威风威风"
+        data-id="rtet"
+        data-source="images/3-2.jpg"
+        src="images/3-2.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚供热供热行业突然很夫威风威风"
+        data-id="dsfsdf"
+        data-source="images/3-3.jpg"
+        src="images/3-3.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚日供热供热供热夫威风威风"
+        data-id="ghthty"
+        data-source="images/3-4.jpg"
+        src="images/3-4.jpg"
+        width="100px"
+        height="100px"
+      />
 
-<h1>一组外网源图地址</h1>
-<div>
-	<img class="js-lightbox" data-role="lightbox" data-group="group-6" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="http://b.hiphotos.baidu.com/image/pic/item/e4dde71190ef76c666af095f9e16fdfaaf516741.jpg" src="images/2-5.jpg" width="100px" height="100px">
-    	<img class="js-lightbox" data-role="lightbox" data-group="group-6" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="http://b.hiphotos.baidu.com/image/pic/item/14ce36d3d539b600ab94fdc3ea50352ac65cb768.jpg" src="images/2-5.jpg" width="100px" height="100px">
-        	<img class="js-lightbox" data-role="lightbox" data-group="group-6" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="http://g.hiphotos.baidu.com/image/pic/item/7af40ad162d9f2d3f9c667e2abec8a136227ccec.jpg" src="images/2-5.jpg" width="100px" height="100px">
-            	<img class="js-lightbox" data-role="lightbox" data-group="group-6" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="http://a.hiphotos.baidu.com/image/pic/item/a5c27d1ed21b0ef4a332b69adcc451da80cb3e1f.jpg" src="images/2-5.jpg" width="100px" height="100px">
-                	<img class="js-lightbox" data-role="lightbox" data-group="group-6" data-caption="俄方未婚夫威风威风" data-id="bfdgb" data-source="http://b.hiphotos.baidu.com/image/pic/item/562c11dfa9ec8a136a447de8f503918fa0ecc05f.jpg" src="images/2-5.jpg" width="100px" height="100px">
-</div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚夫二哥热歌如果热威风威风"
+        data-id="4f6we4f"
+        data-source="images/3-1.jpg"
+        src="images/3-1.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚夫威风威风"
+        data-id="grkeghruieh455"
+        data-source="images/3-2.jpg"
+        src="images/3-2.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚供热供热行业突然很夫威风威风"
+        data-id="iuyiuer55"
+        data-source="images/3-3.jpg"
+        src="images/3-3.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-4"
+        data-caption="俄方未婚日供热供热供热夫威风威风"
+        data-id="lgjko5552"
+        data-source="images/3-4.jpg"
+        src="images/3-4.jpg"
+        width="100px"
+        height="100px"
+      />
+    </div>
+    <h1>一组图片只有一张</h1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-5"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="images/2-5.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+    </div>
 
-<!--遮罩
+    <h1>一组外网源图地址</h1>
+    <div>
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-6"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="http://b.hiphotos.baidu.com/image/pic/item/e4dde71190ef76c666af095f9e16fdfaaf516741.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-6"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="http://b.hiphotos.baidu.com/image/pic/item/14ce36d3d539b600ab94fdc3ea50352ac65cb768.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-6"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="http://g.hiphotos.baidu.com/image/pic/item/7af40ad162d9f2d3f9c667e2abec8a136227ccec.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-6"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="http://a.hiphotos.baidu.com/image/pic/item/a5c27d1ed21b0ef4a332b69adcc451da80cb3e1f.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+      <img
+        class="js-lightbox"
+        data-role="lightbox"
+        data-group="group-6"
+        data-caption="俄方未婚夫威风威风"
+        data-id="bfdgb"
+        data-source="http://b.hiphotos.baidu.com/image/pic/item/562c11dfa9ec8a136a447de8f503918fa0ecc05f.jpg"
+        src="images/2-5.jpg"
+        width="100px"
+        height="100px"
+      />
+    </div>
+
+    <!--遮罩
 <div id="G-lightbox-mask"></div>
 <!--弹出层
 <div id="G-lightbox-popup">
@@ -107,16 +356,15 @@ data-caption="nghnhg"当前图片的描述文字<br>
     </div>
 </div>-->
 
-<script>
-$(function(){
-	var lightbox = new LightBox({
-														speed:300,
-														maxWidth:900,
-														maxHeight:600,
-														maskOpacity:.04
-														});	
-});
-</script>
-
-</body> 
+    <script>
+      $(function() {
+        var lightbox = new LightBox({
+          speed: 300,
+          maxWidth: 900,
+          maxHeight: 600,
+          maskOpacity: 0.04
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,5 +1,6 @@
 # lightbox图片画廊全屏预览插件
 # 引入文件
+# 预览地址：https://yangliulang.github.io/lightbox/lightbox.html
 link rel="stylesheet" type="text/css" href="lightbox.css" <br>
 <script type="text/javascript" src="jquery.js"></script><br>
 <script type="text/javascript" src="lightbox.js"></script><br>
